@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday gulab!</title>
+    <link rel="icon" type="image/jpg" href="images/sph.jpg">
+    
+    <style>
+        body {
+            background-image: url(/images/sph.jpg);
+            background-size: 1000px;
+            font-family: Arial, sans-serif;
+            background-color: #a67f7f;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #d2eeee;
+        }
+        p {
+            color: #72837f;
+            font-size: 18px;
+        }
+        .countdown {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .gallery img {
+            max-width: 400px;
+            min-width: 400;
+            max-height: 300px;
+            min-height: 300px;
+
+            margin: 30px;
+            border-radius: 10px;
+        }
+        .message {
+            margin: 20px auto;
+            max-width: 600px;
+            background-color: #c8dae5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(194, 180, 225, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday kutty **t**!</h1>
+    <p>Welcome to my website sathiyapriyan.</p>
+    
+    <!-- Countdown Timer -->
+    <div class="countdown">
+        <p>Time left until your special day:</p>
+        <p id="timer">00:00:00</p>
+    </div>
+    
+    <!-- Photo Gallery -->
+    <h2 style="color: #213c4d;">Our Memories</h2>
+    <div class="gallery">
+        <!--<img src="images/sp11.jpg" alt="Memory 1">
+        <img src="/images/spshad.jpg" alt="Memory 2">
+        <img src="/images/sp13.jpg" alt="Memory 3">
+
+        <img src="images/sp1.jpg" alt="Memory 4">
+        <img src="/images/sp7.jpg" alt="Memory 5">
+        <img src="/images/sp3.jpg" alt="Memory 6">
+        Add more images as needed -->
+    </div>
+
+    <!-- Personal Message -->
+    <div class="message">
+        <a href="quiz.html"></a>
+        <h2>A Special Message</h2>
+        <p>Dear sathiyapriyan,</p>
+        <p> 
+            My first message to you started with "hello," and now, here we are. It’s been over 2 years and 6 months + 3 days, and in all that time, you’ve never let me down. You always make me the happiest, and you mean everything to me. I want to be there for you for the rest of my life. The life I imagine with you is so amazing. I loved you, I love you, and I will always love you.
+        </p>
+        <p>With all my love,</p>
+        <p style="color: black;">tomato</p>
+        <a href="quiz.html" style="color:rgb(3, 93, 99)">quiz</a>
+    </div>
+
+
+    <script>
+        // Countdown Timer Script
+        const countdown = () => {
+            const countDate = new Date("Sep 3, 2024 00:00:00").getTime();
+            const now = new Date().getTime();
+            const gap = countDate - now;
+            
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+            const day = hour * 24;
+            
+            const textDay = Math.floor(gap / day);
+            const textHour = Math.floor((gap % day) / hour);
+            const textMinute = Math.floor((gap % hour) / minute);
+            const textSecond = Math.floor((gap % minute) / second);
+            
+            document.getElementById('timer').innerHTML = `${textDay}d ${textHour}h ${textMinute}m ${textSecond}s`;
+        };
+        
+        setInterval(countdown, 1000);
+    </script>
+</body>
+</html>

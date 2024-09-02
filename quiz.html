@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Quiz for kutty **t**</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align:justify;
+        }
+        h1 {
+            color: #6d5e1b;
+        }
+        .quiz-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .question {
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+        .options {
+            margin: 10px 0;
+        }
+        .options label {
+            margin-right: 10px;
+            color: #555;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #e5533d;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Birthday Quiz for sathiyapriyan!</h1>
+
+    <div class="quiz-container">
+        <div class="question">
+            Q1:why rakshana love you ?
+        </div>
+        <div class="options">
+            <input type="radio" id="q1a1" name="q1" value="A">
+            <label for="q1a1">A) sathiyapriyan is handsome"</label><br>
+            <input type="radio" id="q1a2" name="q1" value="B">
+            <label for="q1a2">B) sathiyapriyan is good guy</label><br>
+            <input type="radio" id="q1a3" name="q1" value="C">
+            <label for="q1a3">C)sathiyapriyan can able to buy her ice-cream</label><br>
+            <input type="radio" id="q1a4" name="q1" value="D">
+            <label for="q1a4">D)sathiyapriyan can able to buy her kinderjoy everyday after marriage</label>
+        </div>
+
+        <div class="question">
+            Q2: What is our first movie to watch together?
+        </div>
+        <div class="options">
+            <input type="radio" id="q2a1" name="q2" value="A">
+            <label for="q2a1">A) spiderman</label><br>
+            <input type="radio" id="q2a2" name="q2" value="B">
+            <label for="q2a2">B) sarthar</label><br>
+            <input type="radio" id="q2a3" name="q2" value="C">
+            <label for="q2a3">C) pathuthala</label><br>
+            <input type="radio" id="q2a4" name="q2" value="D">
+            <label for="q2a4">D) batman</label>
+        </div>
+
+        <div class="question">
+            Q3: What is my favorite food?
+        </div>
+        <div class="options">
+            <input type="radio" id="q3a1" name="q3" value="A">
+            <label for="q3a1">A) kothu parotta</label><br>
+            <input type="radio" id="q3a2" name="q3" value="B">
+            <label for="q3a2">B) friedrice </label><br>
+            <input type="radio" id="q3a3" name="q3" value="C">
+            <label for="q3a3">C) briyani</label><br>
+            <input type="radio" id="q3a4" name="q3" value="D">
+            <label for="q3a4">D) shawarma</label>
+        </div>
+
+        <div class="question">
+            Q4:why you love rakshana (fun) ?
+        </div>
+        <div class="options">
+            <input type="radio" id="q1a1" name="q1" value="A">
+            <label for="q1a1">A) she  is  beautiful"</label><br>
+            <input type="radio" id="q1a2" name="q1" value="B">
+            <label for="q1a2">B) she is flawless</label><br>
+            <input type="radio" id="q1a3" name="q1" value="C">
+            <label for="q1a3">C) she is ecaxtly looks like a fairy</label><br>
+            <input type="radio" id="q1a4" name="q1" value="D">
+            <label for="q1a4">D) all the three</label>
+        </div>
+
+        <div class="question">
+            Q5: describe about rakshana in whatsapp(dont forgot to put question number)
+        </div>
+        <div class="question">
+            Q6: describe about any good memories in whatsapp(dont forgot to put question number)
+        </div>
+        <div class="question">
+            Q7: did you hate her ever?(dont forgot to put question number)
+        </div>
+        <div class="question">
+            Q8:whom do you love the most in the world?(dont forgot to put question number)
+        </div>
+        <div class="question">
+            Q9:did you ever hurt her?(dont forgot to put question number)
+        </div>
+        <div class="question">
+            Q10: did you ever cried for her?(dont forgot to put question number)
+        </div>
+        <div class="question">
+            Q11:(special) will you be my mine for ever?
+    
+    
+    
+    
+
+        
+
+        <button class="btn" onclick="checkAnswers()">Submit Answers</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+
+            // Answer Key: Update these to match your correct answers
+            const answers = {
+                q1: 'D', // Correct answer for question 1
+                q2: 'C', // Correct answer for question 2
+                q3: 'B',  // Correct answer for question 3
+                q4: 'D',
+                q5:
+            };
+
+            // Check answers
+            for (let question in answers) {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (userAnswer && userAnswer.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            // Display result
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `You got ${score} out of 4 questions correct!`;
+        }
+    </script>
+</body>
+</html>
